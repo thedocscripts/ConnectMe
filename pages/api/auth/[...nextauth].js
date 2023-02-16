@@ -5,7 +5,7 @@ import GoogleProvider from "next-auth/providers/google"
 import { FirestoreAdapter } from "@next-auth/firebase-adapter"
 import { initializeApp } from 'firebase/app';
 import * as admin from 'firebase-admin'
-import acc from '@/adminshi.json'
+
 
 
 
@@ -43,7 +43,7 @@ export const authOptions = {
    credential: admin.credential.cert({
     projectId: process.env.PROYECT_ID ? process.env.PROYECT_ID.replace(/\\n/gm, "\n") : undefined,
      clientEmail: process.env.CLIENT_EMAIL ? process.env.CLIENT_EMAIL.replace(/\\n/gm, "\n") : undefined,
-     privateKey: process.env.PRIVATE_KEY ? process.env.PRIVATE_KEY.replace(/\\n/gm, "\n") : undefined,
+     privateKey: process.env.PRIVATE_KEY ? process.env.PRIVATE_KEY  .replace(/\\n/gm, "\n") : undefined,
    })
   }),
 
