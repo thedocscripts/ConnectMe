@@ -46,7 +46,7 @@ export default function Component() {
         Signed in as {session.user.email} <br />
         <UserInformation data={session.user} />
         <button onClick={() => router.push("/api/auth/signout")}>Sign out</button>
-        <ToastContainer />
+        <ToastContainer pauseOnFocusLoss={false}/>
       </div>
     )
   }
