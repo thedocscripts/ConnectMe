@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"
 import { toast, ToastContainer } from "react-toastify"
 import UserInformation from './user-information'
 import 'react-toastify/dist/ReactToastify.css';
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 
 
@@ -16,6 +16,7 @@ const customId = "custom-id-yes";
 
 export default function Component() {
   const { data: session, status } = useSession()
+  const [isShowing, setShowing] = useState(true)
   const router = useRouter();
   const toastId = useRef(null);
 
@@ -39,7 +40,8 @@ export default function Component() {
   }
   if (session) {
     console.log(status)
-    notify(session.user.name)
+    {isShowing ? notify(session.user.name) : setShowing(false)}
+    
     return (
       <div>
         
