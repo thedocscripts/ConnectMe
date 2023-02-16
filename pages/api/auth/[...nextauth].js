@@ -1,6 +1,7 @@
 import NextAuth from "next-auth"
 import GithubProvider from "next-auth/providers/github"
 import DiscordProvider from "next-auth/providers/discord"
+import GoogleProvider from "next-auth/providers/google"
 
 
 export const authOptions = {
@@ -14,6 +15,10 @@ export const authOptions = {
         clientId: process.env.DISCORD_ID,
         clientSecret: process.env.DISCORD_SECRET,
       }),
+    GoogleProvider({
+        clientId: process.env.GOOGLE_ID,
+        clientSecret: process.env.GOOGLE_SECRET,
+    })
     // ...add more providers here
   ],
 }
