@@ -1,25 +1,26 @@
 import Image from "next/image";
 
 const fetchcomments = () => {
-    return fetch(process.env.NEXTAUTH_URL + "/api/hello", {
-       
+    return fetch("https://jsonplaceholder.typicode.com/posts", {
+        next: {
+            revalidate: 60
+        }
     })
     .then(res => res.json())
 }
 
-export default async function Users({params}){
-    const { id } = params;
+export default async function Users(){
+    
     const comments = await fetchcomments()
     
 
     return(
         <ul style={{ fontSize: '12px'}}>
-            {Object(comments).map(comment => (
+            {comments.map(comment => (
                 <li key={comment.id}>
-                    <h1>Id: {comment.id}</h1>
-                    <h2>{comment.name}</h2>
-                    <h2>{comment.email}</h2>
-                    <Image src={comment.image}  width={100} height={100}/>
+                    <h2>{comment.title}</h2>
+                    <h2>{comment.body}</h2>
+                    {/* <Image src={comment.image}  width={100} height={100}/> */}
                 </li>
             ))}
         </ul>
