@@ -2,9 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    transpilePackages: [
-      '@next-auth/firebase-adapter'
-    ],
+    
     appDir: true
   },
   images: {
