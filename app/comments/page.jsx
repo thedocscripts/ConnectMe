@@ -9,7 +9,7 @@ const fetchcomments = () => {
 
 export default async function Users({params}){
     const { id } = params;
-    const comments = await fetchcomments()
+    const comments = await fetchcomments();
     
 
     return(
