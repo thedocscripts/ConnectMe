@@ -4,10 +4,11 @@ const nextConfig = {
   experimental: {
     transpilePackages: [
       '@next-auth/firebase-adapter'
-    ]
+    ],
+    appDir: true
   },
   images: {
-    domains: ['lh3.googleusercontent.com'],
+    domains: ['lh3.googleusercontent.com', 'avatars.githubusercontent.com', "cdn.discordapp.com"],
   },
 }
 

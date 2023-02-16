@@ -1,10 +1,15 @@
-import { signIn, getCsrfToken, getProviders } from 'next-auth/react'
+import { signIn, getCsrfToken, getProviders, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import styles from '@/styles/Signin.module.css'
 import logopic from '@/public/images/Logo_Blanco.png'
 
 const Signin = ({ csrfToken, providers }) => {
+  
+
+
+  
+ 
   return (
     <div style={{ overflow: 'hidden', position: 'relative' }}>
       <Header />
@@ -13,7 +18,7 @@ const Signin = ({ csrfToken, providers }) => {
         <div className={styles.cardWrapper}>
           <Image src={logopic} width="196px" height="64px" alt='App Logo' style={{ height: '85px', marginBottom: '20px' }} />
           <div className={styles.cardContent}>
-           
+          
             {providers &&
               Object.values(providers).map(provider => (
                 <div key={provider.name} style={{ marginBottom: 0 }}>
@@ -35,10 +40,12 @@ export default Signin
 
 export async function getServerSideProps(context) {
   const providers = await getProviders()
- 
+  const csrfToken = await getCsrfToken(context)
+  
   return {
     props: {
-      providers
+      providers,
+      csrfToken
     },
   }
 }
