@@ -9,12 +9,12 @@ const fetchcomments = () => {
 
 export default async function Users({params}){
     const { id } = params;
-    const comments = await fetchcomments();
+    const comments = await fetchcomments()
     
 
     return(
         <ul style={{ fontSize: '12px'}}>
-            {comments ? comments.map(comment => (
+            {comments.map(comment => (
                 <li key={comment.id}>
                     <h1>Id: {comment.id}</h1>
                     <h2>{comment.name}</h2>
