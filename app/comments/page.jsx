@@ -14,7 +14,7 @@ export default async function Users({params}){
 
     return(
         <ul style={{ fontSize: '12px'}}>
-            {comments.map(comment => (
+            {Object(comments).map(comment => (
                 <li key={comment.id}>
                     <h1>Id: {comment.id}</h1>
                     <h2>{comment.name}</h2>
