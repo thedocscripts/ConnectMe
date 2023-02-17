@@ -10,9 +10,9 @@ import LoginBtn from './login-btn'
 
 export default async  function Home() {
    
-return(<div>
+return(<div >
     <h1>Auth Test</h1>
-    <div>
+    <div  >
         <LoginBtn />
     </div>
 </div>)
