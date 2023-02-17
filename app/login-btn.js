@@ -29,7 +29,7 @@ export default function Component() {
     
     return(
         <div>
-            Loading...
+            Loading Session...
         
         </div>
     )
@@ -51,7 +51,7 @@ export default function Component() {
   }
   return (
     <>
-      Not signed in <br />
+        Porfavor Inicia Session <br />
       <button onClick={() => router.push("/api/auth/signin")}>Sign in</button>
     </>
   )

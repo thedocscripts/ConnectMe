@@ -3,7 +3,7 @@
 @tailwind utilities;
 /*  */
 /*  */
-:root {
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -94,7 +94,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: 
     rgb(var(--background-start-rgb));
- 
+    height: 100;
 }
 
 a {
@@ -106,4 +106,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */

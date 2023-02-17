@@ -2,7 +2,8 @@
 import Providers from "./providers";
 import '@/styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import OffcanvasExample from "@/components/Navbar";
+import Navbar from "./components/Navbar";
+
 
 
 export default function RootLayout({ children }) {
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         
         <Providers>
-          <OffcanvasExample />
+          <Navbar />
           {children}
         </Providers>
       </body>
