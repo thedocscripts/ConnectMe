@@ -3,7 +3,7 @@ import db from "@/firebase"
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 
-const citiesRef = db.collection('users');
+
 
 
 export default async function handler(req, res) {

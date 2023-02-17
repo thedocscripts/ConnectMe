@@ -11,15 +11,7 @@ import * as admin from 'firebase-admin'
 
 
 export const authOptions = {
-  // Configure one or more authentication providers
  
-    // callbacks: {
-    //     session: async (session, token) => {
-    //       session.user.id = token.id;
-         
-    //       return session;
-    //     },
-    //   },
   providers: [
    
     

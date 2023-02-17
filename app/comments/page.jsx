@@ -1,3 +1,5 @@
+
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 
 const fetchcomments = () => {
@@ -10,6 +12,7 @@ const fetchcomments = () => {
 }
 
 export default async function Users(){
+    
     
     const comments = await fetchcomments()
     
