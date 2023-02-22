@@ -25,7 +25,7 @@ const links = [
 export default function Navbar(){
     return(<div className={styles.container}>
         <div className={styles.hijos}>
-            izquierda
+            izquierdaaa
         </div>
         <div className={styles.hijos}>
             <ul  className={styles.lielem}>
