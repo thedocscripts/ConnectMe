@@ -5,16 +5,23 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import styles from '../styles/Home.module.css'
 import LoginBtn from './login-btn'
+import Script from 'next/script'
+import Dat from './components/sc'
+
+
+
+
+
 
 export default async  function Home() {
    
 return(<div >
-    <h1>Auth Test</h1>
-    <div  >
-        <LoginBtn />
-    </div>
+    
+ 
+        {/* <LoginBtn /> */}
+        <Dat/>
+                
 </div>)
 
 }
