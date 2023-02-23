@@ -9,7 +9,7 @@ import db from "@/firebase"
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     // Process a POST request
-    console.log("hello")
+    
     res.send("hello")
   } else{
     

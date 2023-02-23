@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Autocomplete, GoogleMap, InfoWindow, LoadScript, Marker, MarkerF, useLoadScript } from '@react-google-maps/api';
 import styles from '@/styles/GoogleMaps.module.css'
-
+//
 
 function MyComponent() {
     const [Lat, setLat] = useState(41.4121984);
