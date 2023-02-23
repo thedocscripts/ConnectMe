@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import { Autocomplete, GoogleMap, InfoWindow, LoadScript, Marker, MarkerF, useLoadScript } from '@react-google-maps/api';
-import styles from '@/styles/GoogleMaps.module.css'
+import styles from '../../../styles/GoogleMaps.module.css'
 //
 
 function MyComponent() {
