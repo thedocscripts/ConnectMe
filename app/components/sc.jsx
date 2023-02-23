@@ -22,8 +22,8 @@ const links = [
         route: "/about"
     },
     {
-        label: "Proyecto",
-        route: "/proyecto"
+        label: "App",
+        route: "/connectnightapp"
     },
     {
         label: "Contact",
@@ -69,14 +69,12 @@ export default function Dat(){
             <div className={styles.gridline}></div>
             <div className={styles.gridline}></div>
             <div className={styles.gridline}></div>
-        
+            
             <motion.div id="bgtext" className={styles.bgtext} >
                 DAFT<br/> CREATION
             </motion.div>
 
-            <motion.div id="logo" className={styles.logo} initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}>
+            <motion.div id="logo" className={styles.logo} whileHover={{scale: 1.5}} whileTap={{scale: 0.9}} >
                 <Image className={styles.img} src={logo} />
             </motion.div>
 
