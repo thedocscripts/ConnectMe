@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import styles from './DarkToggleButton.module.css'
 export default function DarkToggleButton(){
-    const [ isDark, setDark ] = useState(true);
+    const [ isDark, setDark ] = useState(false);
    
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     useEffect(() =>{
@@ -22,7 +22,7 @@ export default function DarkToggleButton(){
     })
     return(<>
     <label className={styles.switch}>
-        <input type="checkbox" onChange={()=>setDark(!isDark)}/>
+        <input type="checkbox" checked={!isDark} onChange={()=>setDark(!isDark)}/>
         <span className={styles.slider}></span>
     </label>
     </>)
