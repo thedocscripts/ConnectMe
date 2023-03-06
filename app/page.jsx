@@ -8,6 +8,7 @@ import Link from 'next/link'
 import LoginBtn from './login-btn'
 import Script from 'next/script'
 import Dat from './components/sc'
+import LandingPage from './components/MainPage'
 
 
 
@@ -19,8 +20,7 @@ export default async  function Home() {
 return(<div >
     
  
-        {/* <LoginBtn /> */}
-        <Dat/>
+        <LandingPage />
                 
 </div>)
 
