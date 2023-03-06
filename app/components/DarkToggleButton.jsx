@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import styles from './DarkToggleButton.module.css'
 export default function DarkToggleButton(){
-    const [ isDark, setDark ] = useState(false);
+    const [ isDark, setDark ] = useState(true);
    
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     useEffect(() =>{
