@@ -1,5 +1,5 @@
 
-import { authOptions } from '@/app/api/auth/[...nextauth]'
+import { authOptions } from '@/pages/api/auth/[...nextauth]'
 import { signIn, useSession } from 'next-auth/react'
 import Head from 'next/head'
 import Image from 'next/image'
