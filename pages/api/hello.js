@@ -1,7 +1,9 @@
-import db from "@/firebase"
+
+import { db } from "@/firebase";
+
+import { getDocs, collection, doc } from "firebase/firestore";
 
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
 
 
 
@@ -12,17 +14,13 @@ export default async function handler(req, res) {
     
     res.send("hello")
   } else{
-    
-    const snapshot = await citiesRef.get();
-    var arr = []
-    snapshot.forEach(doc => {
-      const data = doc.data()
-      data.id = doc.id
-      
-      arr.push(data)
+    const querySnapshot = await getDocs(collection(db, "users"));
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data());
     });
-    res.send(arr)
-    
+    res.send("hl")
+
 
   }
 }
