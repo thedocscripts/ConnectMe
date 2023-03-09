@@ -14,7 +14,7 @@ import LandingPage from './components/MainPage'
 
 
 async function getData() {
-        const res = await fetch('/api/hello');
+        const res = await fetch('https://www.connect-night.com/api/hello');
         // The return value is *not* serialized
         // You can return Date, Map, Set, etc.
       
