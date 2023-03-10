@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Autocomplete, GoogleMap, InfoWindow, LoadScript, Marker, MarkerF, useLoadScript } from '@react-google-maps/api';
 import styles from './GoogleMaps.module.css'
 import { useSession } from 'next-auth/react';
+import SideBar from '@/app/components/SideBar';
 //
 
 function MyComponent() {
@@ -33,19 +34,22 @@ function MyComponent() {
     })
 
 
-    if(!isLoaded) return <div>Loading...</div>
+    if(!isLoaded) return (
+      <>
+      <div class="flex justify-between mb-1">
+        <span class="text-base font-medium text-blue-700 dark:text-white">Flowbite</span>
+        <span class="text-sm font-medium text-blue-700 dark:text-white">45%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class="bg-blue-600 h-2.5 rounded-full" style={{width: "45%"}}></div>
+      </div>
+      </>
+    )
   return (<>
     
 
     <div className={styles.homeWrapper}>
-      <div className={styles.sidebar}>
-      
-    
-        <button data-text="Awesome" className={styles.button} onClick={geolocation}>
-        <span className={styles.actualtext} >&nbsp;Get location&nbsp;</span>
-        <span className={styles.hovertext}  aria-hidden="true">&nbsp;Get location&nbsp;</span>
-      </button>
-      </div>
+      <SideBar />
     
     <GoogleMap zoom={10} center={{lat: 41.4121984, lng: 2.1528576}} mapContainerClassName={styles.mapcontainer} >
        <MarkerF onLoad={onLoad}  position={{lat: Lat, lng: Lng}} />

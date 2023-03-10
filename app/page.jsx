@@ -5,7 +5,7 @@ import { Alert, Button, Modal } from "flowbite-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-
+        
 import FloatingTool from "./components/FloatingTool";
 
 import CookiesModal from "./components/CookiesModal";
