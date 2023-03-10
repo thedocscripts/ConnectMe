@@ -313,7 +313,7 @@ const Team = ()=> <section className="pt-20 pb-48">
           alt="..."
           src={require('./assets/enrique.jpg')}
           className="shadow-lg rounded-full max-w-full mx-auto"
-          style={{ maxWidth: "120px" }}
+          style={{ maxWidth: "120px", maxHeight: "160px" }}
         />
         <div className="pt-6 text-center">
           <h5 className="text-xl font-bold">
@@ -343,9 +343,9 @@ const Team = ()=> <section className="pt-20 pb-48">
       <div className="px-6">
         <Image
           alt="..."
-          src={require('../assets/img/team-3-800x800.jpg')}
+          src={require('./assets/javier.jpeg')}
           className="shadow-lg rounded-full max-w-full mx-auto"
-          style={{ maxWidth: "120px" }}
+          style={{ maxWidth: "120px", maxHeight: "160px" }}
         />
         <div className="pt-6 text-center">
           <h5 className="text-xl font-bold">
