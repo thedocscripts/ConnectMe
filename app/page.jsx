@@ -5,9 +5,10 @@ import { Alert, Button, Modal } from "flowbite-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import cookieCutter from 'cookie-cutter'
+
 import FloatingTool from "./components/FloatingTool";
-import PrivacyPolicyModal from "./components/PrivacyPolicyModal";
+
+import CookiesModal from "./components/CookiesModal";
 
 
 
@@ -19,7 +20,7 @@ export default function IndexPage(){
         return(
         <div>
             
-               <PrivacyPolicyModal />
+               <CookiesModal />
                 
                <FloatingTool />
                 <Hero />
