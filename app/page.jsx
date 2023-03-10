@@ -4,22 +4,24 @@
 import { Alert, Button, Modal } from "flowbite-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import cookieCutter from 'cookie-cutter'
+import FloatingTool from "./components/FloatingTool";
+import PrivacyPolicyModal from "./components/PrivacyPolicyModal";
 
 
 
 export default function IndexPage(){
-      const {data, user} = useSession({required: true});
-      
+      const {data, user} = useSession({required: false});
+     
      
        
         return(
         <div>
             
-               
-          
-               
+               <PrivacyPolicyModal />
+                
+               <FloatingTool />
                 <Hero />
                 <Services/>
                 <Featured/>
