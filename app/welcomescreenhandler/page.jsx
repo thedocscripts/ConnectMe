@@ -1,73 +1,74 @@
-"use client";
-import { db, getuser } from "@/firebase";
-import {
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  query,
-  updateDoc,
-  where,
-} from "firebase/firestore";
-import { useSession } from "next-auth/react";
-import { useEffect, useLayoutEffect, useState } from "react";
 
-import { getuserdata } from "../components/utils/utils";
+// import { db, getuser } from "@/firebase";
+// import {
+//   collection,
+//   doc,
+//   getDoc,
+//   getDocs,
+//   query,
+//   updateDoc,
+//   where,
+// } from "firebase/firestore";
+// import { useSession } from "next-auth/react";
+// import { useRouter } from "next/navigation";
 
 
-export default function WelcomeScreen() {
-    var once = false;
-  const { data, user } = useSession({ required: true });
 
-  const [count, setCount] = useState(null);
 
-  const saveNote = async (_email) => {
-    const docRef = collection(db, "users");
-    const q = query(
-      docRef,
-      collection(db, "users"),
-      where("email", "==", _email)
-    );
-    var result;
-    getDocs(q).then(async (snapshot) => {
-      var userdata = snapshot.docs[0];
-      
-      if (userdata.data().welcomescreen) {
-        setCount(true)
-        return
-      } else if (userdata.data().welcomescreen == null) {
-       
-        const frankDocRef = doc(db, "users", userdata.id);
-        await updateDoc(frankDocRef, {
-          welcomescreen: false,
-        });
-        setCount(false);
-        return
+// // import { getuserdata } from "../components/utils/utils";
+// var ressss;
 
-        // db.collection('users').doc(userdata.id).update({welcomescreen: true})
-      } else if (userdata.data().welcomescreen == false) {
-        setCount(false)
-        return
-      }
-
-      // snapshot.docs.forEach((doc) => {
-      //     console.log({ id: doc.id, data: doc.data() });
-
-      //   });
-    });
-   
-  };
-  useEffect(() => {
+// export default async function Page() {
     
-    if (data) {
-      if (!once) {
-        saveNote(data.user.email).then(()=>{
-            {count ? console.log("true") : console.log("false")}
-        });
+//     const session = await getServerSession(authOptions)
+
+//         const docRef = collection(db, "users");
+//         const q = query(
+//           docRef,
+//           collection(db, "users"),
+//           where("email", "==", session.user.email)
+//         );
+       
+//         const data = getDocs(q).then(async (snapshot) => {
+//           var userdata = snapshot.docs[0];
+          
+//           if (userdata.data().welcomescreen) {
+           
+//             return(true)
+//           } else if (userdata.data().welcomescreen == null) {
+           
+//             const frankDocRef = doc(db, "users", userdata.id);
+//             await updateDoc(frankDocRef, {
+//               welcomescreen: false,
+//             });        
+//             return(false)
+//           } else if (userdata.data().welcomescreen == false) {
+//             return(false)
+//           }
+          
+          
+//         }).then((value)=>{
+//             if(value){
+//                 ressss = value
+//             }else{
+//                 ressss = value
+//             }
+//         });
+
+
+        
+       
         
         
-        once = true;
-      }
-    }
-  });
+export default function Page(){
+    return(<div></div>)
 }
+  
+   
+// //   };
+
+// }
+
+
+
+

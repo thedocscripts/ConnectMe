@@ -15,7 +15,7 @@ export const authOptions = {
     async signIn({ user, account, profile, email, credentials }) {
       const isAllowedToSignIn = true
       if (isAllowedToSignIn) {
-        return '/welcomescreen'
+        return '/welcomescreenhandler'
       } else {
         // Return false to display a default error message
         return '/unauthorized'

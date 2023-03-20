@@ -4,7 +4,7 @@
 import { Alert, Button, Modal } from "flowbite-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
         
 import FloatingTool from "./components/FloatingTool";
 
@@ -15,11 +15,32 @@ import Link from "next/link";
 
 export default function IndexPage(){
       const {data, user} = useSession({required: false});
-     
+      const escFunction = useCallback((event) => {
+        if (event.key === "Escape") {
+          //Do whatever when esc is pressed
+          console.log("aaa")
+        }
+      }, []);
+    
+      useEffect(() => {
+        document.addEventListener("keydown", escFunction, false);
+    
+        return () => {
+          document.removeEventListener("keydown", escFunction, false);
+        };
+      }, [escFunction]);
+    
+      
      
        
         return(
-        <div>
+        <div onContextMenu={(e) => {
+        e.preventDefault(); // prevent the default behaviour when right clicked
+        console.log("Right Click");
+      }}onKeyDownCapture={(e)=>{
+        e.preventDefault()
+        console.log(e)
+        }}>
             
                <CookiesModal />
                 
