@@ -12,12 +12,13 @@ import DarkToggleButton from "./DarkToggleButton";
 const IndexPage = () => (
   
   <div>
-    <Hero />
+    {/* <Hero />
     <Services/>
     <Featured/>
     <Team/>
     <Finisher/>
-    <Contact/>
+    <Contact/> */}
+    <Foooter />
     </div>
    
   
@@ -596,3 +597,7 @@ const Contact = ()=>  <section className="relative block py-24 lg:pt-0 bg-gray-9
   </div>
 </div>
 </section>
+
+
+
+

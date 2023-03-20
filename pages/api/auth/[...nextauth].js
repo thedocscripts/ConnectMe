@@ -11,7 +11,19 @@ import * as admin from 'firebase-admin'
 
 
 export const authOptions = {
- 
+  callbacks: {
+    async signIn({ user, account, profile, email, credentials }) {
+      const isAllowedToSignIn = true
+      if (isAllowedToSignIn) {
+        return '/welcomescreen'
+      } else {
+        // Return false to display a default error message
+        return '/unauthorized'
+        // Or you can return a URL to redirect to:
+        // return '/unauthorized'
+      }
+    }
+  },
   providers: [
    
     
